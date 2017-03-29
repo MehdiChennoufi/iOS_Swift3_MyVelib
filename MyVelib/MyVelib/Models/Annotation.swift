@@ -9,7 +9,7 @@
 import Foundation
 import MapKit
 
-class StationPin: NSObject, MKAnnotation {
+class Annotation: NSObject, MKAnnotation {
     
     fileprivate var coord = CLLocationCoordinate2D(latitude: 0, longitude: 0)
     
@@ -19,13 +19,17 @@ class StationPin: NSObject, MKAnnotation {
         }
     }
     var pinColor: UIColor?
-    var type: StationType = .standard
     var title: String?
     var subtitle: String?
     var station: Station?
+    var type: StationType = .standard
     
     func setCoordinate(_ newCoordinate: CLLocationCoordinate2D) {
         self.coord = newCoordinate
+    }
+    
+    func setType(type: StationType) {
+        self.type = type
     }
     
     // Création d'une annotation vis-à-vis de l'item
@@ -41,21 +45,16 @@ class StationPin: NSObject, MKAnnotation {
         else {
             self.pinColor = UIColor(hex: 0xA244D1)
         }
-    }
+    }    
+}
+
+enum StationType {
     
-    func setType(type: StationType) {
-        self.type = type
-    }
+    case standard
     
-    enum StationType {
-        
-        case standard
-        
-        case favorite
-        
-        case home
-        
-        case work
-    }
+    case favorite
     
+    case home
+    
+    case work
 }

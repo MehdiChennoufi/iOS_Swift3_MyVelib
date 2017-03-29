@@ -24,6 +24,10 @@ class MainVC: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.navigationBar.isHidden = true
+    }
+    
     //MARK: - AUTRES FONCTIONS DU PROGRAMME
     
     // Récupérations des Contrats

@@ -14,7 +14,6 @@ import SwiftyJSON
 typealias ServiceResponse = ((JSON?, Error?) -> Void)
 class NetworkManager {
     
-    
     static let sharedInstance = NetworkManager()
     fileprivate init() {}
     
@@ -66,7 +65,3 @@ class NetworkManager {
         }
     }
 }
-
-
-
-

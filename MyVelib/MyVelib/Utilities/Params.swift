@@ -16,4 +16,6 @@ class Params {
     static let contracts = "contracts"
     static let stations = "stations"
     
+    static let favId = "favId"
+    
 }

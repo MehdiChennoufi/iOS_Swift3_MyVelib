@@ -11,7 +11,7 @@ import MapKit
 
 class DetailVC: UIViewController, MKMapViewDelegate {
     
-    var stationPin = StationPin()
+    var station : Station!
 
     override func viewDidLoad() {
         super.viewDidLoad()

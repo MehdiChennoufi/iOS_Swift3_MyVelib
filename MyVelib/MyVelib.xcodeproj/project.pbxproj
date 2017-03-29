@@ -9,11 +9,13 @@
 /* Begin PBXBuildFile section */
 		91F009041E89A84100B2374E /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F009021E89A84100B2374E /* MainVC.swift */; };
 		91F009051E89A84100B2374E /* MapViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F009031E89A84100B2374E /* MapViewVC.swift */; };
+		DC032AF91E8BCA6B002934E0 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC032AF81E8BCA6B002934E0 /* Model.swift */; };
+		DC032AFB1E8BCC47002934E0 /* PersistanceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC032AFA1E8BCC47002934E0 /* PersistanceManager.swift */; };
 		DC3ED0C51E8AA222002D93BF /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3ED0C41E8AA222002D93BF /* DetailVC.swift */; };
 		DCD62E6B1E8951BB00F50127 /* Pods_MyVelib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCD62E6A1E8951BB00F50127 /* Pods_MyVelib.framework */; };
 		DCD62E6C1E8951D400F50127 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCD62E651E89518A00F50127 /* MapKit.framework */; };
 		DCD62E6D1E8951D400F50127 /* MapKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DCD62E651E89518A00F50127 /* MapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DCD62E701E8958DB00F50127 /* StationPin.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD62E6F1E8958DB00F50127 /* StationPin.swift */; };
+		DCD62E701E8958DB00F50127 /* Annotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD62E6F1E8958DB00F50127 /* Annotation.swift */; };
 		DCD62E721E895C4F00F50127 /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD62E711E895C4F00F50127 /* UIColor+Hex.swift */; };
 		DCD62E741E89633500F50127 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD62E731E89633500F50127 /* Utilities.swift */; };
 		DCDE83751E890B8A0085DF22 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDE83741E890B8A0085DF22 /* AppDelegate.swift */; };
@@ -45,10 +47,12 @@
 		91F009021E89A84100B2374E /* MainVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		91F009031E89A84100B2374E /* MapViewVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewVC.swift; sourceTree = "<group>"; };
 		9865DC482DC114340D4D6EB6 /* Pods_MyVelib.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyVelib.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC032AF81E8BCA6B002934E0 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		DC032AFA1E8BCC47002934E0 /* PersistanceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistanceManager.swift; sourceTree = "<group>"; };
 		DC3ED0C41E8AA222002D93BF /* DetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
 		DCD62E651E89518A00F50127 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		DCD62E6A1E8951BB00F50127 /* Pods_MyVelib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pods_MyVelib.framework; path = "../../../../../../../../../../Users/etudiant-06/Library/Developer/Xcode/DerivedData/MyVelib-eiyapnpkgkfwupdqkfedomwqqerz/Build/Products/Debug-iphonesimulator/Pods_MyVelib.framework"; sourceTree = "<group>"; };
-		DCD62E6F1E8958DB00F50127 /* StationPin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StationPin.swift; sourceTree = "<group>"; };
+		DCD62E6F1E8958DB00F50127 /* Annotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Annotation.swift; sourceTree = "<group>"; };
 		DCD62E711E895C4F00F50127 /* UIColor+Hex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
 		DCD62E731E89633500F50127 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		DCDE83711E890B8A0085DF22 /* MyVelib.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyVelib.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -134,7 +138,8 @@
 			children = (
 				DCDE838E1E8924780085DF22 /* Contract.swift */,
 				DCDE83901E89252F0085DF22 /* Station.swift */,
-				DCD62E6F1E8958DB00F50127 /* StationPin.swift */,
+				DCD62E6F1E8958DB00F50127 /* Annotation.swift */,
+				DC032AF81E8BCA6B002934E0 /* Model.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -146,6 +151,7 @@
 				DCDE838C1E8910350085DF22 /* NetworkManager.swift */,
 				DCDE838A1E890CFA0085DF22 /* Params.swift */,
 				DCD62E731E89633500F50127 /* Utilities.swift */,
+				DC032AFA1E8BCC47002934E0 /* PersistanceManager.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -296,11 +302,13 @@
 				DCDE838B1E890CFA0085DF22 /* Params.swift in Sources */,
 				DCDE838D1E8910350085DF22 /* NetworkManager.swift in Sources */,
 				DC3ED0C51E8AA222002D93BF /* DetailVC.swift in Sources */,
+				DC032AF91E8BCA6B002934E0 /* Model.swift in Sources */,
 				DCD62E721E895C4F00F50127 /* UIColor+Hex.swift in Sources */,
+				DC032AFB1E8BCC47002934E0 /* PersistanceManager.swift in Sources */,
 				DCDE838F1E8924780085DF22 /* Contract.swift in Sources */,
 				91F009051E89A84100B2374E /* MapViewVC.swift in Sources */,
 				91F009041E89A84100B2374E /* MainVC.swift in Sources */,
-				DCD62E701E8958DB00F50127 /* StationPin.swift in Sources */,
+				DCD62E701E8958DB00F50127 /* Annotation.swift in Sources */,
 				DCDE83911E89252F0085DF22 /* Station.swift in Sources */,
 				DCDE83751E890B8A0085DF22 /* AppDelegate.swift in Sources */,
 				DCD62E741E89633500F50127 /* Utilities.swift in Sources */,
