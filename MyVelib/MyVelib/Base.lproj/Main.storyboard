@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--MainVC-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MainVC" customModule="MyVelib" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nod-Vr-l0T">
+                                <rect key="frame" x="157" y="303" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="DEL-ch-lnI"/>
+                                    <constraint firstAttribute="width" constant="60" id="Lik-7a-2Sa"/>
+                                </constraints>
+                                <state key="normal" image="home"/>
+                                <connections>
+                                    <action selector="toMapViewVC:" destination="BYZ-38-t0r" eventType="touchUpInside" id="twN-P3-3am"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Nod-Vr-l0T" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="GD3-KL-UPb"/>
+                            <constraint firstItem="Nod-Vr-l0T" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hc2-kl-2MO"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <segue destination="KYF-5n-tXP" kind="show" identifier="toMapViewVC" id="RUN-qS-g8Y"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2" y="99"/>
+        </scene>
+        <!--Map ViewVC-->
+        <scene sceneID="ZRf-ck-Nuq">
+            <objects>
+                <viewController id="KYF-5n-tXP" customClass="MapViewVC" customModule="MyVelib" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="K2J-sR-2vF"/>
+                        <viewControllerLayoutGuide type="bottom" id="Aec-gv-q2g"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="C3A-jI-voM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OVT-jM-VlD">
+                                <rect key="frame" x="0.0" y="99" width="375" height="570"/>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wO8-MQ-xlN">
+                                <rect key="frame" x="319" y="615" width="40" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="nf7-C1-FzI"/>
+                                    <constraint firstAttribute="height" constant="32" id="yQ8-FI-ptM"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="fleche"/>
+                            </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="b2s-xt-ZRe">
+                                <rect key="frame" x="128" y="28" width="120" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="F6t-EP-l1T"/>
+                                    <constraint firstAttribute="height" constant="28" id="sJR-f7-Ie5"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Places"/>
+                                    <segment title="Vélos"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segmentedControlTappedWithSender:" destination="KYF-5n-tXP" eventType="valueChanged" id="iQg-XF-4Ql"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="b2s-xt-ZRe" firstAttribute="top" secondItem="K2J-sR-2vF" secondAttribute="bottom" constant="8" id="1yt-PD-qw6"/>
+                            <constraint firstAttribute="trailing" secondItem="OVT-jM-VlD" secondAttribute="trailing" id="FKt-Tv-hz8"/>
+                            <constraint firstItem="OVT-jM-VlD" firstAttribute="top" secondItem="C3A-jI-voM" secondAttribute="top" constant="99" id="Nim-Sr-gdZ"/>
+                            <constraint firstItem="wO8-MQ-xlN" firstAttribute="trailing" secondItem="C3A-jI-voM" secondAttribute="trailingMargin" id="WMr-wj-2OL"/>
+                            <constraint firstItem="b2s-xt-ZRe" firstAttribute="centerX" secondItem="C3A-jI-voM" secondAttribute="centerX" id="Xfh-FJ-zSd"/>
+                            <constraint firstItem="OVT-jM-VlD" firstAttribute="leading" secondItem="C3A-jI-voM" secondAttribute="leading" id="iXC-g2-c63"/>
+                            <constraint firstItem="Aec-gv-q2g" firstAttribute="top" secondItem="wO8-MQ-xlN" secondAttribute="bottom" constant="20" id="wv5-o6-k1z"/>
+                            <constraint firstItem="Aec-gv-q2g" firstAttribute="top" secondItem="OVT-jM-VlD" secondAttribute="bottom" constant="-2" id="x7E-v9-eKI"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="OVT-jM-VlD" id="S6a-rl-XLm"/>
+                        <outlet property="segmentedControl" destination="b2s-xt-ZRe" id="7Dn-oS-2w9"/>
+                        <segue destination="hfL-hZ-V6o" kind="show" identifier="toDetailVC" id="e0f-di-fyt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XuH-2t-Ghr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="756" y="99"/>
+        </scene>
+        <!--DetailVC-->
+        <scene sceneID="yN7-kH-flS">
+            <objects>
+                <viewController id="hfL-hZ-V6o" customClass="DetailVC" customModule="MyVelib" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1Pl-XO-OhZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="b5H-uU-AHe"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="DU8-ug-5qv">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Available bikes : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fkd-Fe-3qV">
+                                <rect key="frame" x="16" y="171" width="178" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ULz-N4-9bz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1530" y="99"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="fleche" width="200" height="200"/>
+        <image name="home" width="60" height="60"/>
+    </resources>
+</document>

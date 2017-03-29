@@ -1,0 +1,479 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		91F009041E89A84100B2374E /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F009021E89A84100B2374E /* MainVC.swift */; };
+		91F009051E89A84100B2374E /* MapViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F009031E89A84100B2374E /* MapViewVC.swift */; };
+		DC3ED0C51E8AA222002D93BF /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3ED0C41E8AA222002D93BF /* DetailVC.swift */; };
+		DCD62E6B1E8951BB00F50127 /* Pods_MyVelib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCD62E6A1E8951BB00F50127 /* Pods_MyVelib.framework */; };
+		DCD62E6C1E8951D400F50127 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCD62E651E89518A00F50127 /* MapKit.framework */; };
+		DCD62E6D1E8951D400F50127 /* MapKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DCD62E651E89518A00F50127 /* MapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DCD62E701E8958DB00F50127 /* StationPin.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD62E6F1E8958DB00F50127 /* StationPin.swift */; };
+		DCD62E721E895C4F00F50127 /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD62E711E895C4F00F50127 /* UIColor+Hex.swift */; };
+		DCD62E741E89633500F50127 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD62E731E89633500F50127 /* Utilities.swift */; };
+		DCDE83751E890B8A0085DF22 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDE83741E890B8A0085DF22 /* AppDelegate.swift */; };
+		DCDE837A1E890B8A0085DF22 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCDE83781E890B8A0085DF22 /* Main.storyboard */; };
+		DCDE837C1E890B8A0085DF22 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DCDE837B1E890B8A0085DF22 /* Assets.xcassets */; };
+		DCDE837F1E890B8A0085DF22 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCDE837D1E890B8A0085DF22 /* LaunchScreen.storyboard */; };
+		DCDE838B1E890CFA0085DF22 /* Params.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDE838A1E890CFA0085DF22 /* Params.swift */; };
+		DCDE838D1E8910350085DF22 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDE838C1E8910350085DF22 /* NetworkManager.swift */; };
+		DCDE838F1E8924780085DF22 /* Contract.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDE838E1E8924780085DF22 /* Contract.swift */; };
+		DCDE83911E89252F0085DF22 /* Station.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDE83901E89252F0085DF22 /* Station.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		DCD62E6E1E8951D400F50127 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				DCD62E6D1E8951D400F50127 /* MapKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		3B694AAC7E0164AE83216613 /* Pods-MyVelib.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyVelib.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyVelib/Pods-MyVelib.release.xcconfig"; sourceTree = "<group>"; };
+		91F009021E89A84100B2374E /* MainVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
+		91F009031E89A84100B2374E /* MapViewVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewVC.swift; sourceTree = "<group>"; };
+		9865DC482DC114340D4D6EB6 /* Pods_MyVelib.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyVelib.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC3ED0C41E8AA222002D93BF /* DetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
+		DCD62E651E89518A00F50127 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		DCD62E6A1E8951BB00F50127 /* Pods_MyVelib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pods_MyVelib.framework; path = "../../../../../../../../../../Users/etudiant-06/Library/Developer/Xcode/DerivedData/MyVelib-eiyapnpkgkfwupdqkfedomwqqerz/Build/Products/Debug-iphonesimulator/Pods_MyVelib.framework"; sourceTree = "<group>"; };
+		DCD62E6F1E8958DB00F50127 /* StationPin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StationPin.swift; sourceTree = "<group>"; };
+		DCD62E711E895C4F00F50127 /* UIColor+Hex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
+		DCD62E731E89633500F50127 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		DCDE83711E890B8A0085DF22 /* MyVelib.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyVelib.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DCDE83741E890B8A0085DF22 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DCDE83791E890B8A0085DF22 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DCDE837B1E890B8A0085DF22 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DCDE837E1E890B8A0085DF22 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DCDE83801E890B8A0085DF22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DCDE838A1E890CFA0085DF22 /* Params.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Params.swift; sourceTree = "<group>"; };
+		DCDE838C1E8910350085DF22 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		DCDE838E1E8924780085DF22 /* Contract.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contract.swift; sourceTree = "<group>"; };
+		DCDE83901E89252F0085DF22 /* Station.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Station.swift; sourceTree = "<group>"; };
+		EADA9F6D095A66A5FB424560 /* Pods-MyVelib.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyVelib.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyVelib/Pods-MyVelib.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DCDE836E1E890B8A0085DF22 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DCD62E6C1E8951D400F50127 /* MapKit.framework in Frameworks */,
+				DCD62E6B1E8951BB00F50127 /* Pods_MyVelib.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		53E99F43E404C010F67EDEF0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DCD62E6A1E8951BB00F50127 /* Pods_MyVelib.framework */,
+				DCD62E651E89518A00F50127 /* MapKit.framework */,
+				9865DC482DC114340D4D6EB6 /* Pods_MyVelib.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		91F009011E89A84100B2374E /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				91F009021E89A84100B2374E /* MainVC.swift */,
+				91F009031E89A84100B2374E /* MapViewVC.swift */,
+				DC3ED0C41E8AA222002D93BF /* DetailVC.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		DCDE83681E890B8A0085DF22 = {
+			isa = PBXGroup;
+			children = (
+				DCDE83731E890B8A0085DF22 /* MyVelib */,
+				DCDE83721E890B8A0085DF22 /* Products */,
+				FF7EF545C8578D09A34CDAC1 /* Pods */,
+				53E99F43E404C010F67EDEF0 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		DCDE83721E890B8A0085DF22 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DCDE83711E890B8A0085DF22 /* MyVelib.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DCDE83731E890B8A0085DF22 /* MyVelib */ = {
+			isa = PBXGroup;
+			children = (
+				DCDE83891E890BCE0085DF22 /* Views */,
+				91F009011E89A84100B2374E /* Controllers */,
+				DCDE83871E890BCE0085DF22 /* Models */,
+				DCDE83881E890BCE0085DF22 /* Utilities */,
+				DCDE83741E890B8A0085DF22 /* AppDelegate.swift */,
+				DCDE837B1E890B8A0085DF22 /* Assets.xcassets */,
+				DCDE83801E890B8A0085DF22 /* Info.plist */,
+			);
+			path = MyVelib;
+			sourceTree = "<group>";
+		};
+		DCDE83871E890BCE0085DF22 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DCDE838E1E8924780085DF22 /* Contract.swift */,
+				DCDE83901E89252F0085DF22 /* Station.swift */,
+				DCD62E6F1E8958DB00F50127 /* StationPin.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		DCDE83881E890BCE0085DF22 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				DCD62E711E895C4F00F50127 /* UIColor+Hex.swift */,
+				DCDE838C1E8910350085DF22 /* NetworkManager.swift */,
+				DCDE838A1E890CFA0085DF22 /* Params.swift */,
+				DCD62E731E89633500F50127 /* Utilities.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		DCDE83891E890BCE0085DF22 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DCDE83781E890B8A0085DF22 /* Main.storyboard */,
+				DCDE837D1E890B8A0085DF22 /* LaunchScreen.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FF7EF545C8578D09A34CDAC1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EADA9F6D095A66A5FB424560 /* Pods-MyVelib.debug.xcconfig */,
+				3B694AAC7E0164AE83216613 /* Pods-MyVelib.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DCDE83701E890B8A0085DF22 /* MyVelib */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DCDE83831E890B8A0085DF22 /* Build configuration list for PBXNativeTarget "MyVelib" */;
+			buildPhases = (
+				9D14793CB28DCDA293C003FE /* [CP] Check Pods Manifest.lock */,
+				DCDE836D1E890B8A0085DF22 /* Sources */,
+				DCDE836E1E890B8A0085DF22 /* Frameworks */,
+				DCDE836F1E890B8A0085DF22 /* Resources */,
+				2CD750C8E8A3395B99D7DFDE /* [CP] Embed Pods Frameworks */,
+				9C5C37AC46C6FBAB6CAB4BAE /* [CP] Copy Pods Resources */,
+				DCD62E6E1E8951D400F50127 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MyVelib;
+			productName = MyVelib;
+			productReference = DCDE83711E890B8A0085DF22 /* MyVelib.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DCDE83691E890B8A0085DF22 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "Mehdi Chennoufi";
+				TargetAttributes = {
+					DCDE83701E890B8A0085DF22 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 2CS5LFHDLH;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = DCDE836C1E890B8A0085DF22 /* Build configuration list for PBXProject "MyVelib" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DCDE83681E890B8A0085DF22;
+			productRefGroup = DCDE83721E890B8A0085DF22 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DCDE83701E890B8A0085DF22 /* MyVelib */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DCDE836F1E890B8A0085DF22 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DCDE837F1E890B8A0085DF22 /* LaunchScreen.storyboard in Resources */,
+				DCDE837C1E890B8A0085DF22 /* Assets.xcassets in Resources */,
+				DCDE837A1E890B8A0085DF22 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2CD750C8E8A3395B99D7DFDE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyVelib/Pods-MyVelib-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9C5C37AC46C6FBAB6CAB4BAE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyVelib/Pods-MyVelib-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9D14793CB28DCDA293C003FE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DCDE836D1E890B8A0085DF22 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DCDE838B1E890CFA0085DF22 /* Params.swift in Sources */,
+				DCDE838D1E8910350085DF22 /* NetworkManager.swift in Sources */,
+				DC3ED0C51E8AA222002D93BF /* DetailVC.swift in Sources */,
+				DCD62E721E895C4F00F50127 /* UIColor+Hex.swift in Sources */,
+				DCDE838F1E8924780085DF22 /* Contract.swift in Sources */,
+				91F009051E89A84100B2374E /* MapViewVC.swift in Sources */,
+				91F009041E89A84100B2374E /* MainVC.swift in Sources */,
+				DCD62E701E8958DB00F50127 /* StationPin.swift in Sources */,
+				DCDE83911E89252F0085DF22 /* Station.swift in Sources */,
+				DCDE83751E890B8A0085DF22 /* AppDelegate.swift in Sources */,
+				DCD62E741E89633500F50127 /* Utilities.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		DCDE83781E890B8A0085DF22 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DCDE83791E890B8A0085DF22 /* Base */,
+			);
+			name = Main.storyboard;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		DCDE837D1E890B8A0085DF22 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DCDE837E1E890B8A0085DF22 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			path = ..;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DCDE83811E890B8A0085DF22 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DCDE83821E890B8A0085DF22 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DCDE83841E890B8A0085DF22 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EADA9F6D095A66A5FB424560 /* Pods-MyVelib.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 2CS5LFHDLH;
+				INFOPLIST_FILE = MyVelib/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mehdi.chennoufi.MyVelib;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		DCDE83851E890B8A0085DF22 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3B694AAC7E0164AE83216613 /* Pods-MyVelib.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 2CS5LFHDLH;
+				INFOPLIST_FILE = MyVelib/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mehdi.chennoufi.MyVelib;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DCDE836C1E890B8A0085DF22 /* Build configuration list for PBXProject "MyVelib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DCDE83811E890B8A0085DF22 /* Debug */,
+				DCDE83821E890B8A0085DF22 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DCDE83831E890B8A0085DF22 /* Build configuration list for PBXNativeTarget "MyVelib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DCDE83841E890B8A0085DF22 /* Debug */,
+				DCDE83851E890B8A0085DF22 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DCDE83691E890B8A0085DF22 /* Project object */;
+}
