@@ -30,7 +30,7 @@ class NetworkManager {
                 if let value = response.result.value {
                     let json = JSON(value)
                     //print(self.finalEndpoint)
-                    //print("DATA \(json)")
+                    print("#CONTRACT DATA \(json)")
                     completion(json, nil)
                 }
             case .failure(let error):
@@ -53,8 +53,7 @@ class NetworkManager {
             case .success:
                 if let value = response.result.value {
                     let json = JSON(value)
-                    print("Getting data")
-                    print("Data is \(json)")
+                    print("#STATIONS Data \(json)")
                     
                     completion(json, nil)
                 }

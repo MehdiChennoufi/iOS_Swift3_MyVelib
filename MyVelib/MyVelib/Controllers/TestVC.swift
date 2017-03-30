@@ -1,17 +1,14 @@
 //
-//  DetailVC.swift
+//  TestVC.swift
 //  MyVelib
 //
-//  Created by etudiant-06 on 28/03/2017.
+//  Created by etudiant-06 on 30/03/2017.
 //  Copyright © 2017 Mehdi Chennoufi. All rights reserved.
 //
 
 import UIKit
-import MapKit
 
-class DetailVC: UIViewController, MKMapViewDelegate {
-    
-    var station : Station!
+class TestVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

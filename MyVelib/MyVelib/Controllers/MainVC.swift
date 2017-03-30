@@ -13,19 +13,45 @@ import SwiftyJSON
 class MainVC: UIViewController {
     
     //MARK: - VARIABLES & CONSTANTES
-    var stations = [Station]()
+    @IBOutlet weak var homeButton: UIButton!
+    @IBOutlet weak var tableView: UITableView!
+    
     var contracts = [Contract]()
+    var screenType = ScreenType.home
+    
+    var stations = [Station]() {
+        didSet {
+            if oldValue.count < stations.count {
+                self.tableView.reloadData()
+            }
+        }
+    }
     
     //MARK: - FONCTIONS DE LA VUE
     override func viewDidLoad() {
         super.viewDidLoad()
-        getStationInfo(station: "Paris")
         
-        // Do any additional setup after loading the view, typically from a nib.
+        self.tableView.delegate = self
+        self.tableView.dataSource = self
+        
+        // Récupération des stations
+        self.getStationInfo(station: "Paris")
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        self.navigationController?.navigationBar.isHidden = true
+        // En fonction du ScreenType, la couleur du fond et les boutons vont changer (1seule vue pour trois fenêtres)
+        switch self.screenType {
+        case .home:
+            self.homeButton.setImage(#imageLiteral(resourceName: "home"), for: .normal)
+            view.backgroundColor = UIColor.lightGray
+            
+        case .work:
+            self.homeButton.setImage(#imageLiteral(resourceName: "work"), for: .normal)
+            view.backgroundColor = UIColor(hex: 0x2D8633)
+        case .geoloc:
+            self.homeButton.setImage(#imageLiteral(resourceName: "work"), for: .normal)
+            view.backgroundColor = UIColor(hex: 0xDC0116)
+        }
     }
     
     //MARK: - AUTRES FONCTIONS DU PROGRAMME
@@ -33,10 +59,10 @@ class MainVC: UIViewController {
     // Récupérations des Contrats
     func getContratcInfo() {
         NetworkManager.sharedInstance.getContract { (json: JSON?, error: Error?) in
-                        guard error == nil else {
-                            print("error occurs")
-                            return
-                        }
+            guard error == nil else {
+                print("error occurs")
+                return
+            }
             if let json = json {
                 let jsonArray = json.arrayValue
                 
@@ -44,11 +70,9 @@ class MainVC: UIViewController {
                     let currentElement = Contract(json: element)
                     self.contracts.append(currentElement)
                     print(self.contracts)
-                    
                 }
-                //print("SUCCESS data is : \(self.stations) ")
             }
-            }
+        }
     }
     // Récupération des Stations
     func getStationInfo(station: String) {
@@ -63,17 +87,16 @@ class MainVC: UIViewController {
                 for element in jsonArray {
                     let currentElement = Station(json: element)
                     self.stations.append(currentElement)
-                    
                 }
-                //print("SUCCESS data is : \(self.stations) ")
             }
         }
+        
         
     }
     
     // Segue vers la MapView
     @IBAction func toMapViewVC(_ sender: UIButton) {
-       self.performSegue(withIdentifier: "toMapViewVC", sender: self)
+        self.performSegue(withIdentifier: "toMapViewVC", sender: self)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -82,6 +105,30 @@ class MainVC: UIViewController {
                 destinationVC.stations = self.stations
             }
         }
-    
+    }
 }
+
+//MARK: - GESTION DE LA TABLEVIEW
+extension MainVC: UITableViewDelegate, UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        return stations.count
+        
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let stationToDisplay = stations[indexPath.row]
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! Cell
+        
+        cell.stationNameLabel.text = "\(stationToDisplay.name)"
+        cell.bikeStandsNumberLabel.text = "\(stationToDisplay.availableBikeStands)"
+        cell.bikesNumberLabel.text = "\(stationToDisplay.availableBikes)"
+        cell.distanceNumberLabel.text = "A remplir"
+        
+        return cell
+    }
+    
+    
 }

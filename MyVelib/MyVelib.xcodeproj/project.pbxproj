@@ -11,7 +11,6 @@
 		91F009051E89A84100B2374E /* MapViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F009031E89A84100B2374E /* MapViewVC.swift */; };
 		DC032AF91E8BCA6B002934E0 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC032AF81E8BCA6B002934E0 /* Model.swift */; };
 		DC032AFB1E8BCC47002934E0 /* PersistanceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC032AFA1E8BCC47002934E0 /* PersistanceManager.swift */; };
-		DC3ED0C51E8AA222002D93BF /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3ED0C41E8AA222002D93BF /* DetailVC.swift */; };
 		DCD62E6B1E8951BB00F50127 /* Pods_MyVelib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCD62E6A1E8951BB00F50127 /* Pods_MyVelib.framework */; };
 		DCD62E6C1E8951D400F50127 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCD62E651E89518A00F50127 /* MapKit.framework */; };
 		DCD62E6D1E8951D400F50127 /* MapKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DCD62E651E89518A00F50127 /* MapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -26,6 +25,9 @@
 		DCDE838D1E8910350085DF22 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDE838C1E8910350085DF22 /* NetworkManager.swift */; };
 		DCDE838F1E8924780085DF22 /* Contract.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDE838E1E8924780085DF22 /* Contract.swift */; };
 		DCDE83911E89252F0085DF22 /* Station.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDE83901E89252F0085DF22 /* Station.swift */; };
+		DCF95C9F1E8D05EE0068C21D /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF95C9E1E8D05EE0068C21D /* Cell.swift */; };
+		DCF95CA11E8D20A40068C21D /* PageViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF95CA01E8D20A40068C21D /* PageViewVC.swift */; };
+		DCF95CA31E8D5E4E0068C21D /* TestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF95CA21E8D5E4E0068C21D /* TestVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -49,7 +51,6 @@
 		9865DC482DC114340D4D6EB6 /* Pods_MyVelib.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyVelib.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC032AF81E8BCA6B002934E0 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		DC032AFA1E8BCC47002934E0 /* PersistanceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistanceManager.swift; sourceTree = "<group>"; };
-		DC3ED0C41E8AA222002D93BF /* DetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
 		DCD62E651E89518A00F50127 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		DCD62E6A1E8951BB00F50127 /* Pods_MyVelib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pods_MyVelib.framework; path = "../../../../../../../../../../Users/etudiant-06/Library/Developer/Xcode/DerivedData/MyVelib-eiyapnpkgkfwupdqkfedomwqqerz/Build/Products/Debug-iphonesimulator/Pods_MyVelib.framework"; sourceTree = "<group>"; };
 		DCD62E6F1E8958DB00F50127 /* Annotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Annotation.swift; sourceTree = "<group>"; };
@@ -65,6 +66,9 @@
 		DCDE838C1E8910350085DF22 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		DCDE838E1E8924780085DF22 /* Contract.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contract.swift; sourceTree = "<group>"; };
 		DCDE83901E89252F0085DF22 /* Station.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Station.swift; sourceTree = "<group>"; };
+		DCF95C9E1E8D05EE0068C21D /* Cell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
+		DCF95CA01E8D20A40068C21D /* PageViewVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageViewVC.swift; sourceTree = "<group>"; };
+		DCF95CA21E8D5E4E0068C21D /* TestVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestVC.swift; sourceTree = "<group>"; };
 		EADA9F6D095A66A5FB424560 /* Pods-MyVelib.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyVelib.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyVelib/Pods-MyVelib.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -96,7 +100,8 @@
 			children = (
 				91F009021E89A84100B2374E /* MainVC.swift */,
 				91F009031E89A84100B2374E /* MapViewVC.swift */,
-				DC3ED0C41E8AA222002D93BF /* DetailVC.swift */,
+				DCF95CA01E8D20A40068C21D /* PageViewVC.swift */,
+				DCF95CA21E8D5E4E0068C21D /* TestVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -161,6 +166,7 @@
 			children = (
 				DCDE83781E890B8A0085DF22 /* Main.storyboard */,
 				DCDE837D1E890B8A0085DF22 /* LaunchScreen.storyboard */,
+				DCF95C9E1E8D05EE0068C21D /* Cell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -300,14 +306,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				DCDE838B1E890CFA0085DF22 /* Params.swift in Sources */,
+				DCF95CA11E8D20A40068C21D /* PageViewVC.swift in Sources */,
 				DCDE838D1E8910350085DF22 /* NetworkManager.swift in Sources */,
-				DC3ED0C51E8AA222002D93BF /* DetailVC.swift in Sources */,
 				DC032AF91E8BCA6B002934E0 /* Model.swift in Sources */,
 				DCD62E721E895C4F00F50127 /* UIColor+Hex.swift in Sources */,
 				DC032AFB1E8BCC47002934E0 /* PersistanceManager.swift in Sources */,
 				DCDE838F1E8924780085DF22 /* Contract.swift in Sources */,
 				91F009051E89A84100B2374E /* MapViewVC.swift in Sources */,
 				91F009041E89A84100B2374E /* MainVC.swift in Sources */,
+				DCF95C9F1E8D05EE0068C21D /* Cell.swift in Sources */,
+				DCF95CA31E8D5E4E0068C21D /* TestVC.swift in Sources */,
 				DCD62E701E8958DB00F50127 /* Annotation.swift in Sources */,
 				DCDE83911E89252F0085DF22 /* Station.swift in Sources */,
 				DCDE83751E890B8A0085DF22 /* AppDelegate.swift in Sources */,

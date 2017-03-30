@@ -20,6 +20,8 @@ class MapViewVC: UIViewController {
     // Favoris éventuellement sauvegardés
     var favoritesIds = [Int]()
     
+    
+    
     //MARK: - FONCTIONS DE LA VUE
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,10 +32,10 @@ class MapViewVC: UIViewController {
         
     }
     override func viewWillAppear(_ animated: Bool) {
-        self.navigationController?.navigationBar.isHidden = false
         if let favoritesIds = PersistanceManager.getFavoriteIds() {
             self.favoritesIds = favoritesIds
         }
+        print("\(favoritesIds)")
         addAllAnnotations()
         
         setDiameter(location: CLLocation(latitude: (self.stations?.first?.position.lat)!, longitude: (self.stations?.first?.position.long)!))
@@ -41,7 +43,7 @@ class MapViewVC: UIViewController {
     
     override func  viewWillDisappear(_ animated: Bool) {
         PersistanceManager.saveFavoritesIds(stationIds: favoritesIds)
-        //print(favoritesIds ?? "pas de favoris sauvegardés")
+        print("\(favoritesIds)")
     }
     
     //MARK: - AUTRES FONCTIONS DU PROGRAMME
@@ -101,6 +103,9 @@ class MapViewVC: UIViewController {
         addAllAnnotations()
     }
   
+    @IBAction func backButtonTapped(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
+    }
 }
 
 extension MapViewVC: MKMapViewDelegate {
