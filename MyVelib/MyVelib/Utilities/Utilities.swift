@@ -32,3 +32,19 @@ extension String {
         }
     }
 }
+
+extension Double {
+    func toFormattedString(_ digits : Int) -> String? {
+        let formatter = NumberFormatter()
+        
+        formatter.numberStyle = .decimal
+        formatter.maximumFractionDigits = digits
+        formatter.minimumFractionDigits = digits
+        
+        if let output = formatter.string(from: NSNumber.init(value:self)) {
+            return output
+        } else {
+            return nil
+        }
+    }
+}

@@ -17,15 +17,19 @@ class PageViewVC: UIPageViewController, UIPageViewControllerDelegate, UIPageView
         self.delegate = self
         self.dataSource = self
         
+        
         let p0 = (self.storyboard?.instantiateViewController(withIdentifier: "page0"))! as! MainVC
         p0.screenType = .home
+        
         let p1 = (self.storyboard?.instantiateViewController(withIdentifier: "page0"))! as! MainVC
         p1.screenType = .work
+        
         let p2 = (self.storyboard?.instantiateViewController(withIdentifier: "page0"))! as! MainVC
         p2.screenType = .geoloc
         
         pages = [p0, p1, p2]
         setViewControllers([p0], direction: UIPageViewControllerNavigationDirection.forward, animated: true, completion: nil)
+
     }
 
     // Fonction pour renvoyer le ViewController situé AVANT le controller actuel. Renvoi Nil si
@@ -61,6 +65,7 @@ class PageViewVC: UIPageViewController, UIPageViewControllerDelegate, UIPageView
     }
     
     func presentationIndex(for pageViewController: UIPageViewController) -> Int {
+        
         return 0
     }
 }

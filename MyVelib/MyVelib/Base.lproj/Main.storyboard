@@ -179,6 +179,9 @@
                                     <constraint firstAttribute="height" constant="32" id="yQ8-FI-ptM"/>
                                 </constraints>
                                 <state key="normal" title="Button" image="fleche"/>
+                                <connections>
+                                    <action selector="showUserPosition:" destination="KYF-5n-tXP" eventType="touchUpInside" id="Fx1-3D-uDv"/>
+                                </connections>
                             </button>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="b2s-xt-ZRe">
                                 <rect key="frame" x="127.5" y="28" width="120" height="29"/>

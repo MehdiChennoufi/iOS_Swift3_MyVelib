@@ -8,6 +8,7 @@
 
 import Foundation
 import SwiftyJSON
+import MapKit
 
 // Propriétés d'une Station
 struct Station {
@@ -19,7 +20,15 @@ struct Station {
     var availableBikeStands: Int
     var availableBikes: Int
     var status: String
+    var distanceToUser: Double
     
+    // Calcul pour la distance de la station par rapport à l'utilisateur
+    mutating func setDistanceToUser (userPosition: CLLocation) {
+        let position = CLLocation(latitude: self.position.lat, longitude: self.position.long)
+        self.distanceToUser = userPosition.distance(from: position)
+    }
+    
+    // Initialisation du JSON
     init(json: JSON) {
         self.number = json["number"].intValue
         self.name = json["name"].stringValue
@@ -30,6 +39,7 @@ struct Station {
         self.availableBikeStands = json["available_bike_stands"].intValue
         self.availableBikes = json["available_bikes"].intValue
         self.status = json["status"].stringValue
+        self.distanceToUser = 0.0
     }
     
 }

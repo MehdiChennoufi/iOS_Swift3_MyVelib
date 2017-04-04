@@ -8,5 +8,7 @@ target 'MyVelib' do
   # Pods for MyVelib
   pod 'Alamofire', '~> 4.4'
   pod 'SwiftyJSON'
+  pod 'Flurry-iOS-SDK/FlurrySDK'
+  pod 'Flurry-iOS-SDK/FlurryAds'
 
 end

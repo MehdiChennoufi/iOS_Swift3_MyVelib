@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		71916256D9CA07641D2D170A /* Pods_MyVelib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9865DC482DC114340D4D6EB6 /* Pods_MyVelib.framework */; };
 		91F009041E89A84100B2374E /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F009021E89A84100B2374E /* MainVC.swift */; };
 		91F009051E89A84100B2374E /* MapViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F009031E89A84100B2374E /* MapViewVC.swift */; };
 		DC032AF91E8BCA6B002934E0 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC032AF81E8BCA6B002934E0 /* Model.swift */; };
@@ -27,7 +28,6 @@
 		DCDE83911E89252F0085DF22 /* Station.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDE83901E89252F0085DF22 /* Station.swift */; };
 		DCF95C9F1E8D05EE0068C21D /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF95C9E1E8D05EE0068C21D /* Cell.swift */; };
 		DCF95CA11E8D20A40068C21D /* PageViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF95CA01E8D20A40068C21D /* PageViewVC.swift */; };
-		DCF95CA31E8D5E4E0068C21D /* TestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF95CA21E8D5E4E0068C21D /* TestVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -68,7 +68,6 @@
 		DCDE83901E89252F0085DF22 /* Station.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Station.swift; sourceTree = "<group>"; };
 		DCF95C9E1E8D05EE0068C21D /* Cell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
 		DCF95CA01E8D20A40068C21D /* PageViewVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageViewVC.swift; sourceTree = "<group>"; };
-		DCF95CA21E8D5E4E0068C21D /* TestVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestVC.swift; sourceTree = "<group>"; };
 		EADA9F6D095A66A5FB424560 /* Pods-MyVelib.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyVelib.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyVelib/Pods-MyVelib.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -79,6 +78,7 @@
 			files = (
 				DCD62E6C1E8951D400F50127 /* MapKit.framework in Frameworks */,
 				DCD62E6B1E8951BB00F50127 /* Pods_MyVelib.framework in Frameworks */,
+				71916256D9CA07641D2D170A /* Pods_MyVelib.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,7 +101,6 @@
 				91F009021E89A84100B2374E /* MainVC.swift */,
 				91F009031E89A84100B2374E /* MapViewVC.swift */,
 				DCF95CA01E8D20A40068C21D /* PageViewVC.swift */,
-				DCF95CA21E8D5E4E0068C21D /* TestVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -315,7 +314,6 @@
 				91F009051E89A84100B2374E /* MapViewVC.swift in Sources */,
 				91F009041E89A84100B2374E /* MainVC.swift in Sources */,
 				DCF95C9F1E8D05EE0068C21D /* Cell.swift in Sources */,
-				DCF95CA31E8D5E4E0068C21D /* TestVC.swift in Sources */,
 				DCD62E701E8958DB00F50127 /* Annotation.swift in Sources */,
 				DCDE83911E89252F0085DF22 /* Station.swift in Sources */,
 				DCDE83751E890B8A0085DF22 /* AppDelegate.swift in Sources */,

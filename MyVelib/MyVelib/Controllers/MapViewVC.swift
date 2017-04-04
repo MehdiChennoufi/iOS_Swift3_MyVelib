@@ -17,17 +17,19 @@ class MapViewVC: UIViewController {
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     var stations: [Station]?
     let locationManager = CLLocationManager()
+    var initialUserLocation: CLLocation?
+    
     // Favoris éventuellement sauvegardés
     var favoritesIds = [Int]()
-    
     
     
     //MARK: - FONCTIONS DE LA VUE
     override func viewDidLoad() {
         super.viewDidLoad()
-        requestLocationAccess()
         mapView.showsUserLocation = true
         mapView.delegate = self
+        //Changement de la couleur du Pin de localisation
+        self.mapView.tintColor = UIColor.cyan
 
         
     }
@@ -38,29 +40,16 @@ class MapViewVC: UIViewController {
         print("\(favoritesIds)")
         addAllAnnotations()
         
-        setDiameter(location: CLLocation(latitude: (self.stations?.first?.position.lat)!, longitude: (self.stations?.first?.position.long)!))
+        setRadius(location: CLLocation(latitude: (self.stations?.first?.position.lat)!, longitude: (self.stations?.first?.position.long)!))
     }
     
-    override func  viewWillDisappear(_ animated: Bool) {
+    override func viewWillDisappear(_ animated: Bool) {
         PersistanceManager.saveFavoritesIds(stationIds: favoritesIds)
         print("\(favoritesIds)")
     }
     
-    //MARK: - AUTRES FONCTIONS DU PROGRAMME
-    func requestLocationAccess() {
-        let status = CLLocationManager.authorizationStatus()
-        
-        switch status {
-        case .authorizedAlways, .authorizedWhenInUse:
-            return
-            
-        case .denied, .restricted:
-            print("location access denied")
-            
-        default:
-            locationManager.requestWhenInUseAuthorization()
-        }
-    }
+    
+    //MARK: - AUTRES FONCTIONS SUR LES ANNOTATIONS ET LA MAP
     
     // Ajout d'une annotation à l'écran
     func addAnnotation(name: String, station: Station, type: StationType) {
@@ -70,7 +59,6 @@ class MapViewVC: UIViewController {
         
         annotation.buildFromItem(station)
         mapView.addAnnotation(annotation)
-        
     }
     
     // Ajout de toutes les annotations à l'écran
@@ -92,7 +80,7 @@ class MapViewVC: UIViewController {
     }
 
     // Fonction permettant un zoom de la Map à l'affichage
-    func setDiameter(location: CLLocation) {
+    func setRadius(location: CLLocation) {
         let center = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
         let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.02, longitudeDelta: 0.02))
         self.mapView.setRegion(region, animated: true)
@@ -108,6 +96,51 @@ class MapViewVC: UIViewController {
     }
 }
 
+//MARK: - FONCTIONS SUR LA LOCALISATION DE L UTILISATEUR
+extension MapViewVC: CLLocationManagerDelegate {
+    
+    //Demande de l'autorisation
+    func requestLocationAccess() {
+        let status = CLLocationManager.authorizationStatus()
+        
+        switch status {
+        case .authorizedAlways, .authorizedWhenInUse:
+            return
+            
+        case .denied, .restricted:
+            print("location access denied")
+            
+        default:
+            locationManager.requestWhenInUseAuthorization()
+        }
+        
+    }
+    // Initialisation de la localisation
+    func initUSerLocation() {
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        requestLocationAccess()
+        locationManager.startUpdatingLocation()
+        
+    }
+    // Activation de la localisation par le bouton sur l'écran
+    @IBAction func showUserPosition(_ sender: UIButton) {
+        requestLocationAccess()
+        initUSerLocation()
+        self.mapView.showsUserLocation = true
+    }
+    
+    // Suivi de MAJ de la localisation
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        print("location status updated")
+        if let lastPosition = locations.last {
+            setRadius(location: lastPosition)
+            locationManager.stopUpdatingLocation()
+        }
+    }
+}
+
+// MARK: FONCTIONS LIEES AU FONCTIONNEMENT DE LA MAP
 extension MapViewVC: MKMapViewDelegate {
     
     // Fonctions pour créer une annotation (pin) personnalisée

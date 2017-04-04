@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Flurry-iOS-SDK.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-MyVelib.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -22,17 +27,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>16FF63D30FAFB83CA9677C0DB335FC8A</key>
+		<key>4C3AAFF387C321D89902AA2FFC7B2EB1</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>54B2A7F94FDA7510731F9C4927E97D9B</key>
+		<key>586AEB1726ED2AC41F1093C55BEB6D78</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>88E9EC28B8B46C3631E6B242B50F4442</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C9A88793C4BEBFA7CBBAFD1C5FBC6DCE</key>
 		<dict>
 			<key>primary</key>
 			<true/>
