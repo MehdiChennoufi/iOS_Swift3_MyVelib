@@ -129,7 +129,6 @@ extension MapViewVC: CLLocationManagerDelegate {
         initUSerLocation()
         self.mapView.showsUserLocation = true
     }
-    
     // Suivi de MAJ de la localisation
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         print("location status updated")

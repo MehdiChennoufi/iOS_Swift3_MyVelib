@@ -17,5 +17,6 @@ class Params {
     static let stations = "stations"
     
     static let favId = "favId"
+    static let updateNotifs = "updateInfos"
     
 }
